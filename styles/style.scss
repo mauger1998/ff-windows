@@ -2,7 +2,7 @@ $light-blue:#55B8FF;
 $dark-blue:#0460BB;
 $black:#030303;
 $white:#ffffff;
-$h1:96px;
+$h1:80px;
 $mobile-h1:64px;
 $h2:48px;
 $mobile-h2:40px;
@@ -13,6 +13,12 @@ $mobile-base:14px;
 $tagline:14px;
 $mobile-tagline:12px;
 
+@font-face {
+    font-family:brandon;
+    src: url("Brandon_bld.otf");
+}
+
+
 // Reset
 
 *,
@@ -21,7 +27,7 @@ $mobile-tagline:12px;
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family:"Montserrat", sans-serif;
+    font-family:brandon, sans-serif;
 }
 
 img {
@@ -79,7 +85,7 @@ button {
 // Fonts
 
 h1 {
-    font-family: 'Adobe Garamond Pro', sans-serif;
+    font-family:brandon, sans-serif;
     font-size:$h1;
     line-height: $h1 * 1.1;
 
@@ -92,19 +98,21 @@ h1 {
 }
 
 h2 {
-    font-family: 'Adobe Garamond Pro', sans-serif;
+    font-family:brandon, sans-serif I !important;
     font-size:$h2;
     line-height: $h2 * 1.1;
 
 
     span {
-        font-family: 'Adobe Garamond Pro', sans-serif;
+        font-family:"Adobe Garamond Pro Italic 400" !important;
         line-height: $h2 * 1.1;
         color:$light-blue;
+        font-style: italic !important;
+
     }
 }
 h3 {
-    font-family: 'Adobe Garamond Pro', sans-serif;
+    font-family:brandon, sans-serif;
     font-size:$h3;
     line-height: $h3 * 1.1;
 
@@ -252,7 +260,7 @@ header {
     .header-wrapper {
         width:100%;
         max-width:1440px;
-        padding:1rem 4rem;
+        padding:0.5rem 4rem;
         display:flex;
         align-items: center;
         justify-content: space-between;
@@ -297,57 +305,15 @@ header {
 // Main
 
 main {
+    background-image: linear-gradient(to top, #030303, #03030300 50%), url(../public/images/main-hero-image.png);
+    color:white;
+    background-size:cover;
+
     .wrapper {
-        display:flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding-block:0rem;
-
-        .main-left {
-            width:65%;
-            display:flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap:2rem;
-
-            .main-left-below-title {
-                display:flex;
-                align-items: flex-end;
-                gap:2rem;
-
-                p {
-                    max-width:28ch;
-                }
-            }
-        }
-        .main-right {
-            width:35%;
-        }
+        padding:28rem 4rem;
+        padding-block-end:2rem;
     }
-}
-@media (max-width:1024px) {
-    main {
-        .wrapper {
-            flex-direction: column;
-            gap:8rem;
-            padding-block:6rem;
-
-            .main-left,
-            .main-right {
-                width:100%;
-            }
-
-            h1 {
-                font-size:$mobile-h1;
-                line-height:$mobile-h1 * 1.1;
-
-                span {
-                    line-height:$mobile-h1 * 1.1;
-
-                }
-            }
-        }
-    }
+    
 }
 @media  (max-width:600px) {
     .main-left-below-title {
@@ -392,7 +358,7 @@ main {
             }
 
             & > p {
-                max-width:28ch;
+                max-width:32ch;
             }
 
             .two-icon-grid {
@@ -455,7 +421,7 @@ main {
         gap:4rem !important;
 
         p {
-            max-width:28ch;
+            max-width:32ch;
         }
     }
 }
@@ -488,7 +454,7 @@ main {
             }
 
             p {
-                max-width:28ch;
+                max-width:32ch;
             }
         }
     }

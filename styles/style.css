@@ -1,10 +1,14 @@
+@font-face {
+  font-family: brandon;
+  src: url("Brandon_bld.otf");
+}
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: brandon, sans-serif;
 }
 
 img {
@@ -62,30 +66,31 @@ button:hover {
 }
 
 h1 {
-  font-family: "Adobe Garamond Pro", sans-serif;
-  font-size: 96px;
-  line-height: 105.6px;
+  font-family: brandon, sans-serif;
+  font-size: 80px;
+  line-height: 88px;
 }
 h1 span {
   font-family: "Adobe Garamond Pro Italic 400" !important;
-  line-height: 105.6px;
+  line-height: 88px;
   color: #55B8FF;
   font-style: italic !important;
 }
 
 h2 {
-  font-family: "Adobe Garamond Pro", sans-serif;
+  font-family: brandon, sans-serif I !important;
   font-size: 48px;
   line-height: 52.8px;
 }
 h2 span {
-  font-family: "Adobe Garamond Pro", sans-serif;
+  font-family: "Adobe Garamond Pro Italic 400" !important;
   line-height: 52.8px;
   color: #55B8FF;
+  font-style: italic !important;
 }
 
 h3 {
-  font-family: "Adobe Garamond Pro", sans-serif;
+  font-family: brandon, sans-serif;
   font-size: 24px;
   line-height: 26.4px;
 }
@@ -220,7 +225,7 @@ p {
 header .header-wrapper {
   width: 100%;
   max-width: 1440px;
-  padding: 1rem 4rem;
+  padding: 0.5rem 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -254,49 +259,17 @@ header .header-wrapper .logo-container {
   }
 }
 
+main {
+  background-image: linear-gradient(to top, #030303, rgba(3, 3, 3, 0) 50%), url(../public/images/main-hero-image.png);
+  color: white;
+  background-size: cover;
+}
 main .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-block: 0rem;
-}
-main .wrapper .main-left {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
-}
-main .wrapper .main-left .main-left-below-title {
-  display: flex;
-  align-items: flex-end;
-  gap: 2rem;
-}
-main .wrapper .main-left .main-left-below-title p {
-  max-width: 28ch;
-}
-main .wrapper .main-right {
-  width: 35%;
+  padding: 28rem 4rem;
+  -webkit-padding-after: 2rem;
+          padding-block-end: 2rem;
 }
 
-@media (max-width: 1024px) {
-  main .wrapper {
-    flex-direction: column;
-    gap: 8rem;
-    padding-block: 6rem;
-  }
-  main .wrapper .main-left,
-  main .wrapper .main-right {
-    width: 100%;
-  }
-  main .wrapper h1 {
-    font-size: 64px;
-    line-height: 70.4px;
-  }
-  main .wrapper h1 span {
-    line-height: 70.4px;
-  }
-}
 @media (max-width: 600px) {
   .main-left-below-title {
     flex-direction: column;
@@ -333,7 +306,7 @@ main .wrapper .main-right {
   max-width: 16ch;
 }
 .welcome-section .wrapper .welcome-left > p {
-  max-width: 28ch;
+  max-width: 32ch;
 }
 .welcome-section .wrapper .welcome-left .two-icon-grid {
   display: grid;
@@ -379,7 +352,7 @@ main .wrapper .main-right {
     gap: 4rem !important;
   }
   .two-icon-grid p {
-    max-width: 28ch;
+    max-width: 32ch;
   }
 }
 .gallery-section .wrapper {
@@ -405,5 +378,5 @@ main .wrapper .main-right {
   max-width: 25ch;
 }
 .gallery-section .wrapper .gallery-top p {
-  max-width: 28ch;
+  max-width: 32ch;
 }/*# sourceMappingURL=style.css.map */
