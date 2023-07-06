@@ -1,6 +1,8 @@
+// Register GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 
+// Dropdown
 document.addEventListener("click", (e) => {
   const isDropdownButton = e.target.matches("[data-dropdown-button]")
 
@@ -19,25 +21,17 @@ document.addEventListener("click", (e) => {
 
 
 
-// Scroll Trigger
 // Loader
-
 
 // Select Content to be Loaded
 const content = document.querySelector("body")
+// Select Loader
 const loader = document.querySelector(".loader")
 
 // Get all images
-
 const imgLoad = imagesLoaded(content)
 
-
-
 // Wait for images
-
-
-
-
 setTimeout(() => {
   const imgLoad = imagesLoaded(content)
 
@@ -63,69 +57,42 @@ setTimeout(() => {
       stagger:0.05,
   } )
   })
-}, 2000);
+}, 1000);
 
 
 
 
-// Slider
-
-    // var swiper = new Swiper(".mySwiper", {
-    //   slidesPerView: 4,
-    //   spaceBetween: 16,
-    //   touchMove:true,
-    //   freeMode:true,
-    //   mousewheel:true,
-    //   pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    //   },
-    // });
 
 
-   
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 2,
-      spaceBetween: 8,
-      touchMove:true,
-      freeMode:true,
-      mousewheel:true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        // when window width is >= 320px
-        800: {
-          slidesPerView: 4,
-          spaceBetween: 16,
+// Swiper w/ Breakpoints
+const swiper = new Swiper('.swiper', {
+  // Mobile First
+  slidesPerView: 2,
+  spaceBetween: 8,
+  touchMove:true,
+  freeMode:true,
+  mousewheel:true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 800px
+    800: {
+      slidesPerView: 4,
+      spaceBetween: 16,
 
-        },
-        // when window width is >= 480px
-        
-      }
-    })
+    },    
+  }
+})      
     
 
     
   
-    
-
-
-
-
-
-
-
-
-
-
-
-
+// Scroll Animation
 const imageArray = document.querySelectorAll(".welcome-right img")
-
 const radiusImage = document.querySelector(".radius-image")
-
+// Welcome Section
 gsap.to(".welcome-right img", {
   scrollTrigger: {
     trigger: radiusImage,
@@ -137,17 +104,9 @@ gsap.to(".welcome-right img", {
   borderRadius:"0px",
   x:0,
 });
-// gsap.to(".gallery-bottom img", {
-//   scrollTrigger: {
-//     trigger: ".gallery-bottom img",
-//     start: "top bottom", // when the top of the trigger hits the top of the viewport
-//     scrub: 1,
-//     end:"+=600px"
-//   },
-//   borderRadius:"0px",
-//   x:0,
 
-// });
+// Center Grid Image
+
 gsap.to(".grid-item:nth-child(2) img", {
   scrollTrigger: {
     trigger: ".grid-item:nth-child(2) img",
@@ -160,6 +119,8 @@ gsap.to(".grid-item:nth-child(2) img", {
 
 });
 
+// Center Grid Parralax
+
 const gridItemsParallaxOne = document.querySelectorAll(".grid-item:nth-child(1), .grid-item:nth-child(3)")
 const gridItemsParallaxTwo = document.querySelectorAll(".grid-item:nth-child(4), .grid-item:nth-child(5), .grid-item:nth-child(7)")
 
@@ -167,59 +128,148 @@ const gridItemsParallaxOneP = document.querySelectorAll(".grid-item:nth-child(1)
 const gridItemsParallaxTwoP = document.querySelectorAll(".grid-item:nth-child(4) p, .grid-item:nth-child(5) p, .grid-item:nth-child(7) p")
 
 
-gsap.to(gridItemsParallaxOne, {
-  scrollTrigger: {
-    trigger: gridItemsParallaxOne,
-    start: "top bottom", // when the top of the trigger hits the top of the viewport
-    scrub: 1,
-    duration:1,
-  },
-  y:"0",
-  stagger: 0.1,
 
+// GSAP Media Queries
+let mm = gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+mm.add("(min-width: 967px)", () => {
+
+  // this setup code only runs when viewport is at least 800px wide
+  gsap.to(gridItemsParallaxOne, {
+    scrollTrigger: {
+      trigger: gridItemsParallaxOne,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 1,
+      duration:1,
+    },
+    y:"0",
+    stagger: 0.1,
+  
+  });
+  gsap.to(gridItemsParallaxTwo, {
+    scrollTrigger: {
+      trigger: gridItemsParallaxTwo,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 1,
+      duration:1,
+    },
+    y:"0",
+    stagger: 0.1,
+  
+  });
+  
+  gsap.to(gridItemsParallaxOneP, {
+    scrollTrigger: {
+      trigger: gridItemsParallaxOneP,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 1,
+      duration:1,
+    },
+    y:"0",
+    stagger: 0.2,
+  
+  });
+  gsap.to(gridItemsParallaxTwoP, {
+    scrollTrigger: {
+      trigger: gridItemsParallaxTwoP,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 1,
+    },
+    y:"0",
+    stagger: 0.2,
+  
+  });
+  
+  gsap.to(".circle-wrapper", {
+    scrollTrigger: {
+      trigger: ".circle-wrapper",
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 0.5,
+    },
+    borderRadius:"0px",
+  
+  });
+
+  // return () => { // optional
+  //   // custom cleanup code here (runs when it STOPS matching)
+    
+  // };
 });
-gsap.to(gridItemsParallaxTwo, {
-  scrollTrigger: {
-    trigger: gridItemsParallaxTwo,
-    start: "top bottom", // when the top of the trigger hits the top of the viewport
-    scrub: 1,
-    duration:1,
-  },
-  y:"0",
-  stagger: 0.1,
 
+// // later, if we need to revert all the animations/ScrollTriggers...
+// mm.revert();
+
+// add a media query. When it matches, the associated function will run
+mm.add("(max-width: 966px)", () => {
+
+  // this setup code only runs when viewport is at least 800px wide
+  gsap.to(gridItemsParallaxOne, {
+    scrollTrigger: {
+      trigger: gridItemsParallaxOne,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 0.5,
+      end:"+=300",
+
+    },
+    y:"0",
+    stagger: 0.1,
+  
+  });
+  gsap.to(gridItemsParallaxTwo, {
+    scrollTrigger: {
+      trigger: gridItemsParallaxTwo,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 0.5,
+      end:"+=300",
+
+    },
+    y:"0",
+    stagger: 0.1,
+  
+  });
+  
+  gsap.to(gridItemsParallaxOneP, {
+    scrollTrigger: {
+      trigger: gridItemsParallaxOneP,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 0.5,
+      end:"+=300",
+
+    },
+    y:"0",
+    stagger: 0.1,
+  
+  });
+  gsap.to(gridItemsParallaxTwoP, {
+    scrollTrigger: {
+      trigger: gridItemsParallaxTwoP,
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 0.5,
+      end:"+=300",
+
+    },
+    y:"0",
+    stagger: 0.1,
+  
+  });
+  
+  gsap.to(".circle-wrapper", {
+    scrollTrigger: {
+      trigger: ".circle-wrapper",
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 0.5,
+      end:"+=800",
+    },
+    borderRadius:"0px",
+  
+  });
+
+  // return () => { // optional
+  //   // custom cleanup code here (runs when it STOPS matching)
+    
+  // };
 });
 
-gsap.to(gridItemsParallaxOneP, {
-  scrollTrigger: {
-    trigger: gridItemsParallaxOneP,
-    start: "top bottom", // when the top of the trigger hits the top of the viewport
-    scrub: 1,
-    duration:1,
-  },
-  y:"0",
-  stagger: 0.2,
-
-});
-gsap.to(gridItemsParallaxTwoP, {
-  scrollTrigger: {
-    trigger: gridItemsParallaxTwoP,
-    start: "top bottom", // when the top of the trigger hits the top of the viewport
-    scrub: 1,
-  },
-  y:"0",
-  stagger: 0.2,
-
-});
-
-gsap.to(".circle-wrapper", {
-  scrollTrigger: {
-    trigger: ".circle-wrapper",
-    start: "top bottom", // when the top of the trigger hits the top of the viewport
-    scrub: 0.5,
-  },
-  borderRadius:"0px",
-
-});
-
-
+// // later, if we need to revert all the animations/ScrollTriggers...
+// mm.revert();
