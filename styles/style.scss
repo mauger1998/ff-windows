@@ -20,6 +20,10 @@ $mobile-tagline:12px;
 }
 
 
+
+
+
+
 // Reset
 
 *,
@@ -1056,4 +1060,23 @@ footer {
   }
 
   
-  
+// Growing Image
+
+.growing-image-section {
+    .wrapper {
+        padding-inline:0;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height:100vh;
+        max-height:800px;
+
+        img {
+            border-radius:50%;
+            width:50%;
+            transition:.1s;
+            max-height:min(100vh, 800px);
+            object-fit:cover;
+        }
+    }
+}

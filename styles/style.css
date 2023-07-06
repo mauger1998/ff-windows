@@ -822,4 +822,21 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.growing-image-section .wrapper {
+  padding-inline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-height: 800px;
+}
+.growing-image-section .wrapper img {
+  border-radius: 50%;
+  width: 50%;
+  transition: 0.1s;
+  max-height: min(100vh, 800px);
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

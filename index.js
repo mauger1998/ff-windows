@@ -105,6 +105,19 @@ gsap.to(".welcome-right img", {
   x:0,
 });
 
+
+gsap.to(".growing-image-section .wrapper img", {
+  scrollTrigger: {
+    trigger: ".growing-image-section .wrapper img",
+    start: "top center", // when the top of the trigger hits the top of the viewport
+    scrub: 0.5,
+    end:"+=600px"
+
+  },
+  borderRadius:"0px",
+  width:"100%",
+
+});
 // Center Grid Image
 
 gsap.to(".grid-item:nth-child(2) img", {
@@ -118,6 +131,8 @@ gsap.to(".grid-item:nth-child(2) img", {
   x:0,
 
 });
+
+
 
 // Center Grid Parralax
 
@@ -193,6 +208,8 @@ mm.add("(min-width: 967px)", () => {
     borderRadius:"0px",
   
   });
+
+ 
 
   // return () => { // optional
   //   // custom cleanup code here (runs when it STOPS matching)
@@ -276,3 +293,7 @@ mm.add("(max-width: 966px)", () => {
 
 // // later, if we need to revert all the animations/ScrollTriggers...
 // mm.revert();
+
+
+// Growing Image 
+
