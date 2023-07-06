@@ -618,12 +618,14 @@ main {
     @media (max-width:1024px) {
         .gallery-top {
             flex-direction: column;
-            gap:2rem;
             align-items: flex-start !important;
+            gap:2rem;
 
             .gallery-top-right {
                 align-items: flex-start;
                 justify-content: flex-start;
+
+
             }
         }
     }

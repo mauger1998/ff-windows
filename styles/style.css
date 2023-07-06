@@ -497,8 +497,8 @@ main .wrapper .main-right button {
 @media (max-width: 1024px) {
   .gallery-section .gallery-top {
     flex-direction: column;
-    gap: 2rem;
     align-items: flex-start !important;
+    gap: 2rem;
   }
   .gallery-section .gallery-top .gallery-top-right {
     align-items: flex-start;
