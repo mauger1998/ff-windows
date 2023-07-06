@@ -802,4 +802,7 @@ footer .wrapper .footer-bottom p {
   .footer-top-left .column {
     width: 100% !important;
   }
+}
+html {
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
