@@ -141,7 +141,7 @@ mm.add("(min-width: 967px)", () => {
       trigger: gridItemsParallaxOne,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 1,
-      duration:1,
+      end:"+=500px"
     },
     y:"0",
     stagger: 0.1,
@@ -152,7 +152,7 @@ mm.add("(min-width: 967px)", () => {
       trigger: gridItemsParallaxTwo,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 1,
-      duration:1,
+      end:"+=500px"
     },
     y:"0",
     stagger: 0.1,
@@ -164,7 +164,7 @@ mm.add("(min-width: 967px)", () => {
       trigger: gridItemsParallaxOneP,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 1,
-      duration:1,
+      end:"+=500px"
     },
     y:"0",
     stagger: 0.2,
@@ -175,6 +175,7 @@ mm.add("(min-width: 967px)", () => {
       trigger: gridItemsParallaxTwoP,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 1,
+      end:"+=500px"
     },
     y:"0",
     stagger: 0.2,
@@ -186,6 +187,8 @@ mm.add("(min-width: 967px)", () => {
       trigger: ".circle-wrapper",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 0.5,
+      end:"+=600px"
+
     },
     borderRadius:"0px",
   
