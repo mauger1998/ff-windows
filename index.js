@@ -63,7 +63,54 @@ setTimeout(() => {
       stagger:0.05,
   } )
   })
-}, 2000);
+}, 100);
+
+
+
+
+// Slider
+
+    // var swiper = new Swiper(".mySwiper", {
+    //   slidesPerView: 4,
+    //   spaceBetween: 16,
+    //   touchMove:true,
+    //   freeMode:true,
+    //   mousewheel:true,
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //   },
+    // });
+
+
+   
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 2,
+      spaceBetween: 8,
+      touchMove:true,
+      freeMode:true,
+      mousewheel:true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        800: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+
+        },
+        // when window width is >= 480px
+        
+      }
+    })
+    
+
+    
+  
+    
+
 
 
 
@@ -90,17 +137,17 @@ gsap.to(".welcome-right img", {
   borderRadius:"0px",
   x:0,
 });
-gsap.to(".gallery-bottom img", {
-  scrollTrigger: {
-    trigger: ".gallery-bottom img",
-    start: "top bottom", // when the top of the trigger hits the top of the viewport
-    scrub: 1,
-    end:"+=600px"
-  },
-  borderRadius:"0px",
-  x:0,
+// gsap.to(".gallery-bottom img", {
+//   scrollTrigger: {
+//     trigger: ".gallery-bottom img",
+//     start: "top bottom", // when the top of the trigger hits the top of the viewport
+//     scrub: 1,
+//     end:"+=600px"
+//   },
+//   borderRadius:"0px",
+//   x:0,
 
-});
+// });
 gsap.to(".grid-item:nth-child(2) img", {
   scrollTrigger: {
     trigger: ".grid-item:nth-child(2) img",
@@ -174,6 +221,5 @@ gsap.to(".circle-wrapper", {
   borderRadius:"0px",
 
 });
-
 
 
