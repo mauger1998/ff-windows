@@ -31,28 +31,41 @@ const loader = document.querySelector(".loader")
 
 const imgLoad = imagesLoaded(content)
 
-imgLoad.on("done", instance => {
-  gsap.to(loader, {
-    opacity:0,
-    duration:1.5,
-    pointerEvents:"none",
+
+
+// Wait for images
+
+
+
+
+setTimeout(() => {
+  const imgLoad = imagesLoaded(content)
+
+  imgLoad.on("done", instance => {
+    gsap.to(loader, {
+      opacity:0,
+      duration:1.5,
+      pointerEvents:"none",
+    })
+    gsap.to(".loader > svg", {
+      scale:0,
+      duration:1.5,
+    })
+    gsap.from("h1", {
+      yPercent:50,
+      opacity:0,
+      duration:1,
+  } )
+    gsap.to(".main-right p, .main-right button ", {
+      y:0,
+      opacity:1,
+      duration:1,
+      stagger:0.05,
+  } )
   })
-  gsap.to(".loader > svg", {
-    scale:0,
-    duration:1.5,
-  })
-  gsap.from("h1", {
-    yPercent:50,
-    opacity:0,
-    duration:1,
-} )
-  gsap.to(".main-right p, .main-right button ", {
-    y:0,
-    opacity:1,
-    duration:1,
-    stagger:0.05,
-} )
-})
+}, 2000);
+
+
 
 
 
