@@ -407,7 +407,7 @@ main .wrapper .main-right button {
 .welcome-section .wrapper .welcome-left .two-icon-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
 .welcome-section .wrapper .welcome-left .icon-card {
   display: flex;
