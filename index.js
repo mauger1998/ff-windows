@@ -1,5 +1,7 @@
 // Register GSAP
 gsap.registerPlugin(ScrollTrigger);
+let mm = gsap.matchMedia();
+
 
 
 // Dropdown
@@ -106,18 +108,24 @@ gsap.to(".welcome-right img", {
 });
 
 
-gsap.to(".growing-image-section .wrapper img", {
-  scrollTrigger: {
-    trigger: ".growing-image-section .wrapper img",
-    start: "top center", // when the top of the trigger hits the top of the viewport
-    scrub: 0.5,
-    end:"+=600px"
 
-  },
-  borderRadius:"0px",
-  width:"100%",
 
-});
+  gsap.to(".growing-image-section .wrapper img", {
+    scrollTrigger: {
+      trigger: ".growing-image-section .wrapper img",
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      scrub: 0.5,
+      end:"+=600px"
+  
+    },
+    borderRadius:"0px",
+    width:"100%",
+  
+  });
+
+
+
+
 // Center Grid Image
 
 gsap.to(".grid-item:nth-child(2) img", {
@@ -145,7 +153,6 @@ const gridItemsParallaxTwoP = document.querySelectorAll(".grid-item:nth-child(4)
 
 
 // GSAP Media Queries
-let mm = gsap.matchMedia();
 
 // add a media query. When it matches, the associated function will run
 mm.add("(min-width: 967px)", () => {
@@ -156,7 +163,7 @@ mm.add("(min-width: 967px)", () => {
       trigger: gridItemsParallaxOne,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 1,
-      end:"+=500px"
+      end:"+=250px"
     },
     y:"0",
     stagger: 0.1,
@@ -167,7 +174,7 @@ mm.add("(min-width: 967px)", () => {
       trigger: gridItemsParallaxTwo,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 1,
-      end:"+=500px"
+      end:"+=250px"
     },
     y:"0",
     stagger: 0.1,
@@ -179,7 +186,7 @@ mm.add("(min-width: 967px)", () => {
       trigger: gridItemsParallaxOneP,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 1,
-      end:"+=500px"
+      end:"+=250px"
     },
     y:"0",
     stagger: 0.2,
@@ -190,7 +197,7 @@ mm.add("(min-width: 967px)", () => {
       trigger: gridItemsParallaxTwoP,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 1,
-      end:"+=500px"
+      end:"+=250px"
     },
     y:"0",
     stagger: 0.2,
@@ -209,16 +216,9 @@ mm.add("(min-width: 967px)", () => {
   
   });
 
- 
-
-  // return () => { // optional
-  //   // custom cleanup code here (runs when it STOPS matching)
-    
-  // };
 });
 
-// // later, if we need to revert all the animations/ScrollTriggers...
-// mm.revert();
+
 
 // add a media query. When it matches, the associated function will run
 mm.add("(max-width: 966px)", () => {
@@ -229,7 +229,7 @@ mm.add("(max-width: 966px)", () => {
       trigger: gridItemsParallaxOne,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 0.5,
-      end:"+=300",
+      end:"+=600",
 
     },
     y:"0",
@@ -241,7 +241,7 @@ mm.add("(max-width: 966px)", () => {
       trigger: gridItemsParallaxTwo,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 0.5,
-      end:"+=300",
+      end:"+=600",
 
     },
     y:"0",
@@ -254,7 +254,7 @@ mm.add("(max-width: 966px)", () => {
       trigger: gridItemsParallaxOneP,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 0.5,
-      end:"+=300",
+      end:"+=600",
 
     },
     y:"0",
@@ -266,7 +266,7 @@ mm.add("(max-width: 966px)", () => {
       trigger: gridItemsParallaxTwoP,
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 0.5,
-      end:"+=300",
+      end:"+=600",
 
     },
     y:"0",
