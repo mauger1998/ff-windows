@@ -115,7 +115,7 @@ gsap.to(".welcome-right img", {
       trigger: ".growing-image-section .wrapper img",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 0.5,
-      end:"+=600px"
+      end:"+=550px"
   
     },
     borderRadius:"0px",
