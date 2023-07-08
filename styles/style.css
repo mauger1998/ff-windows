@@ -87,6 +87,7 @@ h2 {
   font-family: brandon, sans-serif !important;
   font-size: 40px;
   line-height: 44px;
+  font-weight: auto;
 }
 h2 span {
   color: #55B8FF;

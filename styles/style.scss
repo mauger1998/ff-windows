@@ -19,11 +19,6 @@ $mobile-tagline:12px;
     src: url(../2MASS-J1808-Normal-_personal-use_.ttf);
 }
 
-
-
-
-
-
 // Reset
 
 *,
@@ -51,7 +46,6 @@ a {
     text-decoration:none;
     color:$black;
 }
-
 section,
 footer,
 header,
@@ -114,6 +108,7 @@ h2 {
     font-family:brandon, sans-serif !important;
     font-size:$h2;
     line-height: $h2 * 1.1;
+    font-weight:auto;
 
 
     span {
