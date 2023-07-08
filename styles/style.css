@@ -315,7 +315,7 @@ main .wrapper .main-right {
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
-  width: 20%;
+  width: 20.1%;
 }
 main .wrapper .main-right p {
   transform: translateY(50%);
