@@ -69,11 +69,12 @@ setTimeout(() => {
 // Swiper w/ Breakpoints
 const swiper = new Swiper('.swiper', {
   // Mobile First
-  slidesPerView: 2,
+  slidesPerView: 2.4,
   spaceBetween: 8,
   touchMove:true,
   freeMode:true,
   mousewheel:true,
+  createElements:true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -81,7 +82,7 @@ const swiper = new Swiper('.swiper', {
   breakpoints: {
     // when window width is >= 800px
     800: {
-      slidesPerView: 4,
+      slidesPerView: 3.2,
       spaceBetween: 16,
 
     },    
@@ -213,6 +214,7 @@ mm.add("(min-width: 967px)", () => {
 
     },
     borderRadius:"0px",
+    width:"100%",
   
   });
 
@@ -279,9 +281,11 @@ mm.add("(max-width: 966px)", () => {
       trigger: ".circle-wrapper",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       scrub: 0.5,
-      end:"+=800",
+      end:"+=900px"
+
     },
     borderRadius:"0px",
+    width:"100%",
   
   });
 

@@ -47,7 +47,7 @@ header .wrapper,
 main .wrapper {
   width: 100%;
   max-width: 1440px;
-  padding: 4rem;
+  padding: 8rem 4rem;
 }
 
 button {
@@ -98,6 +98,7 @@ h3 {
   font-family: brandon, sans-serif !important;
   line-height: clamp(19.8px, 26.4px, 3.85vw) !important;
   font-size: clamp(14px, 24px, 1.5vw) !important;
+  text-align: left;
 }
 h3 span {
   color: #55B8FF;
@@ -461,6 +462,7 @@ main .wrapper .main-right button {
   align-items: flex-start;
   gap: 8rem;
   overflow-x: hidden;
+  padding-block: 6rem;
 }
 .gallery-section .wrapper .gallery-bottom {
   display: grid;
@@ -490,7 +492,7 @@ main .wrapper .main-right button {
   z-index: -1;
 }
 .gallery-section .wrapper .gallery-top h2 {
-  max-width: 25ch;
+  max-width: 18ch;
 }
 .gallery-section .wrapper .gallery-top p {
   max-width: 32ch;
@@ -625,6 +627,12 @@ h2 {
   text-wrap: balance !important;
 }
 
+.contact-section .wrapper {
+  padding-inline: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .contact-section .circle-wrapper {
   display: flex;
   align-items: flex-start;
@@ -633,7 +641,8 @@ h2 {
   justify-content: center;
   gap: 4rem;
   background-color: #F5FBFF;
-  border-radius: 50%;
+  border-radius: 100%;
+  width: 75%;
   padding-block: 4rem !important;
   height: auto !important;
 }
@@ -679,7 +688,10 @@ h2 {
 }
 @media (max-width: 1024px) {
   .contact-section .circle-wrapper .contact-left-titles {
-    width: 70%;
+    width: 90% !important;
+  }
+  .contact-section .circle-wrapper .contact-left-titles h2 {
+    width: 100%;
   }
   .contact-section .circle-wrapper form {
     width: 75%;
@@ -690,7 +702,7 @@ h2 {
     width: 70%;
   }
   .contact-section .circle-wrapper form {
-    width: 75%;
+    width: 90%;
   }
 }
 
@@ -815,13 +827,18 @@ body {
 .mySwiper {
   width: 100%;
 }
+.mySwiper .swiper-pagination {
+  position: static;
+}
 .mySwiper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1rem;
 }
 .mySwiper .swiper-slide img {
   display: block;
