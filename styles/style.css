@@ -295,7 +295,7 @@ header .header-wrapper .logo-container {
 }
 
 main {
-  background-image: linear-gradient(to top, #030303, rgba(3, 3, 3, 0) 75%), url(../public/images/main-hero-image.png);
+  background-image: linear-gradient(to top, #030303, rgba(3, 3, 3, 0) 120%), url(../public/images/main-hero-image.png);
   color: white;
   background-size: cover;
   background-position: right;
@@ -349,7 +349,7 @@ main .wrapper .main-right button {
 }
 @media (max-width: 600px) {
   main {
-    background-image: linear-gradient(to top, #030303, rgba(3, 3, 3, 0.2156862745) 80%), url(../public/images/main-hero-image.png);
+    background-image: linear-gradient(to top, #030303, rgba(3, 3, 3, 0.2156862745) 100%), url(../public/images/main-hero-image.png);
   }
   main .wrapper {
     padding-inline: 2rem;

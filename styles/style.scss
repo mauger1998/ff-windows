@@ -352,7 +352,7 @@ header {
 // Main
 
 main {
-    background-image: linear-gradient(to top, #030303, #03030300 75%), url(../public/images/main-hero-image.png);
+    background-image: linear-gradient(to top, #030303, #03030300 120%), url(../public/images/main-hero-image.png);
     color:white;
     background-size:cover;
     background-position:right;
@@ -416,7 +416,7 @@ main {
     @media (max-width:600px) {
 
         & {
-            background-image: linear-gradient(to top, #030303, #03030337 80%), url(../public/images/main-hero-image.png);
+            background-image: linear-gradient(to top, #030303, #03030337 100%), url(../public/images/main-hero-image.png);
 
         }
         .wrapper {
