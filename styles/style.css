@@ -47,7 +47,7 @@ header .wrapper,
 main .wrapper {
   width: 100%;
   max-width: 1440px;
-  padding: 4rem;
+  padding: 6rem 4rem;
 }
 
 button {
