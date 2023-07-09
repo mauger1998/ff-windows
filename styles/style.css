@@ -823,7 +823,6 @@ body {
     transform: translateX(-50%) translateY(5.5rem);
   }
   .growing-image-section .wrapper h3:nth-child(3) {
-    left: auto;
     right: 2rem;
   }
 }
@@ -842,7 +841,6 @@ body {
     transform: translateX(-50%) translateY(5.5rem);
   }
   .growing-image-section .wrapper h3:nth-child(3) {
-    left: auto;
     right: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1002,7 +1002,6 @@ footer {
                  transform:translateX(-50%) translateY(5.5rem);
                 }
                 &:nth-child(3) {
-                 left:auto;
                  right:2rem;
                 }
          }
@@ -1017,15 +1016,12 @@ footer {
                 color:white;
                 z-index:1;
                 transform:translateY(5.5rem);
-                font-size:$mobile-tagline !important;
-
-                
+                font-size:$mobile-tagline !important;    
                 &:nth-child(2) {
                  left:50%;
                  transform:translateX(-50%) translateY(5.5rem);
                 }
                 &:nth-child(3) {
-                 left:auto;
                  right:1rem;
                 }
          }
