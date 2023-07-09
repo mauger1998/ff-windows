@@ -33,33 +33,55 @@ const loader = document.querySelector(".loader")
 // Get all images
 const imgLoad = imagesLoaded(content)
 
-// Wait for images
-setTimeout(() => {
-  const imgLoad = imagesLoaded(content)
+// // Wait for images
+// setTimeout(() => {
+//   const imgLoad = imagesLoaded(content)
 
-  imgLoad.on("done", instance => {
-    gsap.to(loader, {
-      opacity:0,
-      duration:1.5,
-      pointerEvents:"none",
-    })
-    gsap.to(".loader > svg", {
-      scale:0,
-      duration:1.5,
-    })
-    gsap.from("h1", {
-      yPercent:50,
-      opacity:0,
-      duration:1,
-  } )
-    gsap.to(".main-right p, .main-right button ", {
-      y:0,
-      opacity:1,
-      duration:1,
-      stagger:0.05,
-  } )
-  })
-}, 1000);
+//   imgLoad.on("done", instance => {
+//     gsap.to(loader, {
+//       opacity:0,
+//       duration:1.5,
+//       pointerEvents:"none",
+//     })
+//     gsap.to(".loader > svg", {
+//       scale:0,
+//       duration:1.5,
+//     })
+//     gsap.from("h1", {
+//       yPercent:50,
+//       opacity:0,
+//       duration:1,
+//   } )
+//     gsap.to(".main-right p, .main-right button ", {
+//       y:0,
+//       opacity:1,
+//       duration:1,
+//       stagger:0.05,
+//   } )
+//   })
+// }, 1000);
+
+gsap.to(loader, {
+        opacity:0,
+        duration:1.5,
+        pointerEvents:"none",
+      })
+      gsap.to(".loader > svg", {
+        scale:0,
+        duration:1.5,
+      })
+      gsap.from("h1", {
+        yPercent:50,
+        opacity:0,
+        duration:1,
+    } )
+      gsap.to(".main-right p, .main-right button ", {
+        y:0,
+        opacity:1,
+        duration:1,
+        stagger:0.05,
+    } )
+
 
 // Clip Path
 gsap.to(".two-column-right img", {
