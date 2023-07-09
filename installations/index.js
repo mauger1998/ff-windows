@@ -20,6 +20,8 @@ document.addEventListener("click", (e) => {
 })
 
 
+
+
 // Loader
 
 // Select Content to be Loaded
@@ -56,7 +58,7 @@ setTimeout(() => {
 //       stagger:0.05,
 //   } )
   })
-}, 100);
+}, 1000);
 
 
 // Swiper w/ Breakpoints
@@ -89,14 +91,20 @@ const swiper = new Swiper('.swiper', {
 // Pointer Events
 
 
-gsap.to(".mySwiper", {
-  scrollTrigger: {
-    trigger: ".swiper-slide",
-    start: "top 40%", // when the top of the trigger hits the top of the viewport
-    scrub:0.1,
-    markers:true,
-  },
-  pointerEvents:"all",
-  // stagger:0.1,
 
-});
+
+
+mm.add("(min-width: 1024px)", () => {
+  gsap.to(".mySwiper", {
+    scrollTrigger: {
+      trigger: ".swiper-slide",
+      start: "top 40%", // when the top of the trigger hits the top of the viewport
+      scrub:0.1,
+    },
+    pointerEvents:"all",
+    // stagger:0.1,
+  
+  });
+  
+}) 
+

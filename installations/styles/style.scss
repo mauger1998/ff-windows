@@ -65,12 +65,12 @@ main {
 // Buttons
 
 button {
-    background-color:$light-blue;
+    background-color:$black;
     color:$white;
     font-weight:700;
     cursor:pointer;
-    padding:0.5rem 2rem;
-    border:2px solid $light-blue;
+    padding:1rem 2rem;
+    border:2px solid $black;
     transition: opacity 500ms;
     border-radius:2rem;
 
@@ -305,7 +305,7 @@ header {
     .header-wrapper {
         width:100%;
         max-width:1440px;
-        padding:0.25rem 4rem;
+        padding:0.5rem 4rem;
         display:flex;
         align-items: center;
         justify-content: space-between;
@@ -470,7 +470,14 @@ main {
         
         
          .mySwiper {
+
+
+    @media (min-width:1024px) {
+        & {
             pointer-events:none;
+
+        }
+    }
             width: 100%;
             .swiper-slide {
                 text-align: center;
@@ -678,18 +685,26 @@ main {
     background-image: linear-gradient(to top, #0303039d, #0303039d), url(../../public/images/cta-image.png);
     background-size:cover;
     height:105lvh;
-    max-height:850px;
+    max-height:1000px;
     color:white;
     border-radius: 2rem 2rem 0rem 0rem;
 
 
     .wrapper {
+        text-align:center;
+       
+        button {
+            background-color:$white;
+            color:$black;
+        }
 
         h2 {
-            font-size:$h1;
-            line-height:$h1 * 1.2;
+            font-size:$h2;
+            line-height:$h2 * 1.2;
             max-width:12ch;
+            margin:auto;
             margin-block-end:2rem;
+         
         }
     }
 }

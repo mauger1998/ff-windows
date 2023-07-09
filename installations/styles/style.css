@@ -51,12 +51,12 @@ main .wrapper {
 }
 
 button {
-  background-color: #55B8FF;
+  background-color: #030303;
   color: #ffffff;
   font-weight: 700;
   cursor: pointer;
-  padding: 0.5rem 2rem;
-  border: 2px solid #55B8FF;
+  padding: 1rem 2rem;
+  border: 2px solid #030303;
   transition: opacity 500ms;
   border-radius: 2rem;
 }
@@ -258,7 +258,7 @@ p {
 header .header-wrapper {
   width: 100%;
   max-width: 1440px;
-  padding: 0.25rem 4rem;
+  padding: 0.5rem 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -392,8 +392,12 @@ main .wrapper .main-right button {
   margin-top: -4rem;
 }
 .all-services-gallery-section .wrapper .mySwiper {
-  pointer-events: none;
   width: 100%;
+}
+@media (min-width: 1024px) {
+  .all-services-gallery-section .wrapper .mySwiper {
+    pointer-events: none;
+  }
 }
 .all-services-gallery-section .wrapper .mySwiper .swiper-slide {
   text-align: center;
@@ -564,14 +568,22 @@ main .wrapper .main-right button {
   background-image: linear-gradient(to top, rgba(3, 3, 3, 0.6156862745), rgba(3, 3, 3, 0.6156862745)), url(../../public/images/cta-image.png);
   background-size: cover;
   height: 105lvh;
-  max-height: 850px;
+  max-height: 1000px;
   color: white;
   border-radius: 2rem 2rem 0rem 0rem;
 }
+.cta-section .wrapper {
+  text-align: center;
+}
+.cta-section .wrapper button {
+  background-color: #ffffff;
+  color: #030303;
+}
 .cta-section .wrapper h2 {
-  font-size: 64px;
-  line-height: 76.8px;
+  font-size: 40px;
+  line-height: 48px;
   max-width: 12ch;
+  margin: auto;
   -webkit-margin-after: 2rem;
           margin-block-end: 2rem;
 }

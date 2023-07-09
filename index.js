@@ -61,6 +61,17 @@ setTimeout(() => {
   })
 }, 1000);
 
+// Clip Path
+gsap.to(".two-column-right img", {
+  scrollTrigger: {
+    trigger: ".two-column-section",
+    start: "top center", // when the top of the trigger hits the top of the viewport
+    end:"+=100",
+    scrub:-0.5,
+  },
+  clipPath:"polygon(100% 0, 0 0, 0 100%, 100% 100%)",
+});
+
 
 
 
@@ -89,6 +100,29 @@ const swiper = new Swiper('.swiper', {
   }
 })      
     
+
+// Clip Path
+gsap.to(".swiper-slide img", {
+  scrollTrigger: {
+    trigger: ".gallery-section",
+    start: "top top", // when the top of the trigger hits the top of the viewport
+    end:"+=150",
+    scrub:-0.5,
+  },
+  clipPath:"polygon(100% 0, 0 0, 0 100%, 100% 100%)",
+});
+
+// Contact Section
+gsap.to(".contact-section", {
+  scrollTrigger: {
+    trigger: ".contact-section",
+    start: "top bottom", // when the top of the trigger hits the top of the viewport
+    end:"+=600",
+    scrub:0.2,
+  },
+  y:0,
+  opacity:1,
+});
 
     
   
@@ -142,7 +176,10 @@ gsap.to(".growing-image-section .wrapper h3", {
 });
 
 
-// Pointer Events
+
+
+mm.add("(min-width: 1024px)", () => {
+  // Pointer Events
 
 
 gsap.to(".mySwiper", {
@@ -150,11 +187,14 @@ gsap.to(".mySwiper", {
     trigger: ".swiper-slide",
     start: "top -12%", // when the top of the trigger hits the top of the viewport
     scrub:0.1,
-    markers:true,
   },
   pointerEvents:"all",
   // stagger:0.1,
 
 });
+  
+}) 
+
+
 
 

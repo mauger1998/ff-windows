@@ -30,6 +30,7 @@ $mobile-tagline:12px;
     font-family:"Montserrat", sans-serif;
 }
 
+
 img {
     width:100%;
 }
@@ -65,12 +66,12 @@ main {
 // Buttons
 
 button {
-    background-color:$light-blue;
+    background-color:$black;
     color:$white;
     font-weight:700;
     cursor:pointer;
-    padding:0.5rem 2rem;
-    border:2px solid $light-blue;
+    padding:1rem 2rem;
+    border:2px solid $black;
     transition: opacity 500ms;
     border-radius:2rem;
 
@@ -305,7 +306,7 @@ header {
     .header-wrapper {
         width:100%;
         max-width:1440px;
-        padding:0.25rem 4rem;
+        padding:0.5rem 4rem;
         display:flex;
         align-items: center;
         justify-content: space-between;
@@ -361,20 +362,27 @@ header {
 // Main
 
 main {
-    background-image: linear-gradient(to top, #0303039d, #0303039d), url(../public/images/NEW-HERO.png);
+    background-image: linear-gradient(to top, #030303, #03030350 50%), url(../public/images/r-architecture-pz-mgh-cq-2-ks-0-unsplash-3.png);
     color:white;
     background-size:cover;
     background-position:right;
 
     .wrapper {
-        padding:24rem 4rem;
-        padding-block-end:2rem;
+        padding-block-start:24rem;
+        padding-block-end:4rem;
         display:flex;
         align-items: flex-end;
         gap:0rem;
+        height:90svh;
+        max-height:1000px;
+
 
         .main-left {
             width:80%;
+
+            h1 {
+                max-width:16ch;
+            }
         }
 
         .main-right {
@@ -400,6 +408,7 @@ main {
             flex-direction: column;
             align-items: flex-start;
             gap:2rem;
+            justify-content: flex-end;
 
             .main-right {
                     width:100%;
@@ -425,7 +434,7 @@ main {
     @media (max-width:600px) {
 
         & {
-            background-image: linear-gradient(to top, #0303039d, #0303039d), url(../public/images/NEW-HERO.png);
+            background-image: linear-gradient(to top, #030303, #03030350 50%), url(../public/images/r-architecture-pz-mgh-cq-2-ks-0-unsplash-3.png);
         }
         .wrapper {
             padding-inline:2rem;
@@ -497,7 +506,10 @@ main {
                 width:auto;
                 img {
                     height:100% !important;
+                    width:calc(100% + 4rem);
                     object-fit:cover;
+                    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+                    transition: 500ms ease-in-out;
                 }
             }
     
@@ -508,6 +520,36 @@ main {
             .two-column-grid {
                 grid-template-columns: 1fr 1fr;
                 column-gap:1rem;
+            }
+
+           
+        }
+    }
+    @media (max-width:700px) {
+        .wrapper {
+            .two-column-right {
+                width:auto;
+                img {
+                    height:100% !important;
+                    width:calc(100% + 2rem);
+                    object-fit:cover;
+                    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+                    transition: 500ms ease-in-out;
+                }
+            }
+        }
+    }
+    @media (max-width:500px) {
+        .wrapper {
+            .two-column-right {
+                width:auto;
+                img {
+                    height:100% !important;
+                    width:calc(100% + 1rem);
+                    object-fit:cover;
+                    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+                    transition: 500ms ease-in-out;
+                }
             }
         }
     }
@@ -610,6 +652,8 @@ main {
     max-height:850px;
     color:white;
     border-radius: 2rem 2rem 0rem 0rem;
+    transform:translateY(16rem);
+    opacity:0;
 
     .wrapper {
         display:flex;
@@ -619,14 +663,19 @@ main {
         gap:4rem;
 
         .contact-titles {
-            h3 {
-                text-align:center;
+            text-align:center;
+            h2 {
+                text-align:center !important;
                 margin-block-end:2rem;
+
+                .tagline {
+                    text-align:center !important;
+                }
             }
         }
 
         .contact-bottom {
-            width:40%;
+            width:500px;
             form {
                 display:flex;
                 flex-direction: column;
@@ -636,7 +685,8 @@ main {
 
                 button {
                     margin-block-start:2rem;
-                    background-color:transparent;
+                    background-color:$white;
+                    color:$black;
                     border:none;
                 }
 
@@ -658,9 +708,26 @@ main {
                         background-color:transparent;
                         border:none;
                         border-bottom:2px solid white;
+                        color:white;
+                        font-size:18px;
+                        font-weight:500;
+                    }
+                    input:focus,
+                    textarea:focus {
+                        outline:none;
                     }
 
                     
+                }
+            }
+        }
+    }
+    @media (max-width:644px) {
+        .wrapper {
+            .contact-bottom {
+                width:100%;
+
+                form {
                 }
             }
         }
@@ -827,7 +894,13 @@ footer {
 
  .mySwiper {
     width: 100%;
-    pointer-events:none;
+
+    @media (min-width:1024px) {
+        & {
+            pointer-events:none;
+
+        }
+    }
 
 
   
@@ -846,11 +919,8 @@ footer {
         justify-content: center;
         align-items: flex-start;
         gap:1rem;
-        border:2px solid red;
 
-        h3 {
-            
-        }
+        
 
 
 
@@ -860,6 +930,8 @@ footer {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            clip-path: polygon(100% 100%, 0 100%, 0 100%, 100% 100%);
+            transition: clip-path 500ms ease-in-out;
 
           }
       }
@@ -874,6 +946,7 @@ footer {
 
     .wrapper {
         padding:0;
+        max-width:100% !important;
 
         display:flex;
         align-items: center;
@@ -910,6 +983,52 @@ footer {
                 left:auto;
                 right:4rem;
                }
+        }
+    }
+    @media (max-width:700px) {
+        .wrapper {
+            h3 {
+                position:absolute;
+                bottom:2rem;
+                left:2rem;
+                color:white;
+                z-index:1;
+                transform:translateY(5.5rem);
+                font-size:$base-font !important;
+
+                
+                &:nth-child(2) {
+                 left:50%;
+                 transform:translateX(-50%) translateY(5.5rem);
+                }
+                &:nth-child(3) {
+                 left:auto;
+                 right:2rem;
+                }
+         }
+        }
+    }
+    @media (max-width:500px) {
+        .wrapper {
+            h3 {
+                position:absolute;
+                bottom:2rem;
+                left:1rem;
+                color:white;
+                z-index:1;
+                transform:translateY(5.5rem);
+                font-size:$mobile-tagline !important;
+
+                
+                &:nth-child(2) {
+                 left:50%;
+                 transform:translateX(-50%) translateY(5.5rem);
+                }
+                &:nth-child(3) {
+                 left:auto;
+                 right:1rem;
+                }
+         }
         }
     }
 }
