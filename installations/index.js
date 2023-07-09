@@ -46,6 +46,13 @@ setTimeout(() => {
       scale:0,
       duration:1.5,
     })
+    gsap.to("h1", {
+      duration:1,
+      clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+      ease: 
+  Power1.
+  easeInOut,
+  } )
 //     gsap.from("h1", {
 //       yPercent:50,
 //       opacity:0,
@@ -85,7 +92,38 @@ const swiper = new Swiper('.swiper', {
     },    
   }
 })       
-    
+  
+
+
+// Clip Path
+gsap.to(".swiper-slide img", {
+  scrollTrigger: {
+    trigger: ".all-services-gallery-section",
+    start: "top 30%", // when the top of the trigger hits the top of the viewport
+    end:"+=0",
+    scrub:-0.5,
+  },
+  ease: 
+Power4.
+easeIn,
+  clipPath:"polygon(100% 0, 0 0, 0 100%, 100% 100%)",
+});
+
+// Two Column
+
+// Clip Path
+gsap.to(".two-column-right img", {
+  scrollTrigger: {
+    trigger: ".two-column-section",
+    start: "top center", // when the top of the trigger hits the top of the viewport
+    end:"+=100",
+    scrub:-0.5,
+  },
+  ease: 
+  Power4.
+  easeIn,
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+});
 
 
 // Pointer Events

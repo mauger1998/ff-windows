@@ -90,7 +90,8 @@ h1 {
     line-height:clamp(48px * 1.1, $h1 * 1.1, 5vw * 1.1);
     font-size:clamp(48px, $h1, 5vw)!important;
     font-weight:200;
-
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transition:clip-path 300ms ease-in-out;
    
     span {
         color:$light-blue;
@@ -149,6 +150,13 @@ p {
     font-size:clamp(14px, $base-font, 1.15vw)!important;
 }
 
+main {
+    p {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transition:clip-path 300ms ease-in-out;
+    }
+}
+
 // Loader 
 
 .loader {
@@ -186,7 +194,7 @@ p {
     right:0;
     top:calc(100% + 0.5rem);
     padding:1.5rem;
-    background-color:#262626;
+    background-color:$white;
     box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.1);
     display:grid;
     grid-template-columns:1fr 1fr;

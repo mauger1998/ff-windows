@@ -71,11 +71,17 @@ h1 {
   line-height: clamp(52.8px, 70.4px, 5.5vw);
   font-size: clamp(48px, 64px, 5vw) !important;
   font-weight: 200;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: -webkit-clip-path 300ms ease-in-out;
+  transition: clip-path 300ms ease-in-out;
+  transition: clip-path 300ms ease-in-out, -webkit-clip-path 300ms ease-in-out;
 }
 h1 span {
   color: #55B8FF;
   font-style: italic !important;
   font-weight: 400;
+  transition: 500ms ease-in-out;
 }
 @media (max-width: 1166px) {
   h1 {
@@ -415,6 +421,11 @@ main .wrapper .main-right button {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-clip-path: polygon(100% 100%, 0 100%, 0 100%, 100% 100%);
+          clip-path: polygon(100% 100%, 0 100%, 0 100%, 100% 100%);
+  transition: -webkit-clip-path 500ms ease-in-out;
+  transition: clip-path 500ms ease-in-out;
+  transition: clip-path 500ms ease-in-out, -webkit-clip-path 500ms ease-in-out;
 }
 
 .big-grid-section .wrapper {
@@ -555,6 +566,11 @@ main .wrapper .main-right button {
   height: 100% !important;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: -webkit-clip-path 300ms ease-in-out;
+  transition: clip-path 300ms ease-in-out;
+  transition: clip-path 300ms ease-in-out, -webkit-clip-path 300ms ease-in-out;
 }
 @media (max-width: 590px) {
   .two-column-section .wrapper .two-column-grid {

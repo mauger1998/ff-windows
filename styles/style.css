@@ -71,6 +71,11 @@ h1 {
   line-height: clamp(52.8px, 70.4px, 5.5vw);
   font-size: clamp(48px, 64px, 5vw) !important;
   font-weight: 200;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: -webkit-clip-path 300ms ease-in-out;
+  transition: clip-path 300ms ease-in-out;
+  transition: clip-path 300ms ease-in-out, -webkit-clip-path 300ms ease-in-out;
 }
 h1 span {
   color: #55B8FF;
@@ -118,6 +123,14 @@ p {
   font-size: clamp(14px, 16px, 1.15vw) !important;
 }
 
+main p {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: -webkit-clip-path 300ms ease-in-out;
+  transition: clip-path 300ms ease-in-out;
+  transition: clip-path 300ms ease-in-out, -webkit-clip-path 300ms ease-in-out;
+}
+
 .loader {
   position: fixed;
   background-color: white;
@@ -149,7 +162,7 @@ p {
   right: 0;
   top: calc(100% + 0.5rem);
   padding: 1.5rem;
-  background-color: #262626;
+  background-color: #ffffff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -42,21 +42,34 @@ setTimeout(() => {
       opacity:0,
       duration:1.5,
       pointerEvents:"none",
+      ease: 
+  Power4.
+  easeInOut,
     })
     gsap.to(".loader > svg", {
       scale:0,
       duration:1.5,
+      ease: 
+  Power4.
+  easeInOut,
     })
-    gsap.from("h1", {
-      yPercent:50,
-      opacity:0,
+    gsap.to("h1", {
       duration:1,
+      clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+      ease: 
+  Power1.
+  easeInOut,
   } )
-    gsap.to(".main-right p, .main-right button ", {
+    gsap.to(".main-right p", {
       y:0,
+      delay:0.2,
       opacity:1,
       duration:1,
       stagger:0.05,
+      clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+      ease: 
+  Power4.
+  easeInOut,
   } )
   })
 }, 1000);
@@ -69,6 +82,9 @@ gsap.to(".two-column-right img", {
     end:"+=100",
     scrub:-0.5,
   },
+  ease: 
+  Power4.
+  easeIn,
   clipPath:"polygon(100% 0, 0 0, 0 100%, 100% 100%)",
 });
 
@@ -86,6 +102,7 @@ const swiper = new Swiper('.swiper', {
   freeMode:true,
   mousewheel:true,
   createElements:true,
+  
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -109,6 +126,9 @@ gsap.to(".swiper-slide img", {
     end:"+=150",
     scrub:-0.5,
   },
+  ease: 
+Power4.
+easeIn,
   clipPath:"polygon(100% 0, 0 0, 0 100%, 100% 100%)",
 });
 
@@ -122,6 +142,9 @@ gsap.to(".contact-section", {
   },
   y:0,
   opacity:1,
+  ease: 
+Power1.
+easeIn,
 });
 
     
@@ -141,6 +164,9 @@ gsap.to(".contact-section", {
     },
     borderRadius:"0px",
     width:"100%",
+    ease: 
+Power4.
+easeInOut,
   
   });
 
@@ -166,11 +192,14 @@ gsap.to(".growing-image-section .wrapper h3", {
     trigger: ".growing-image-section",
     start: "top center", // when the top of the trigger hits the top of the viewport
     scrub: 0.2,
-    end:"+=800px"
+    end:"+=800px",
 
   },
   y:0,
   opacity:1,
+  ease: 
+Power4.
+easeInOut,
   // stagger:0.1,
 
 });
