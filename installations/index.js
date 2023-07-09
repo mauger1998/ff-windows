@@ -2,8 +2,6 @@
 gsap.registerPlugin(ScrollTrigger);
 let mm = gsap.matchMedia();
 
-
-
 // Dropdown
 document.addEventListener("click", (e) => {
   const isDropdownButton = e.target.matches("[data-dropdown-button]")
@@ -20,7 +18,6 @@ document.addEventListener("click", (e) => {
       dropdown.classList.remove("active")
   })
 })
-
 
 
 // Loader
@@ -47,24 +44,22 @@ setTimeout(() => {
       scale:0,
       duration:1.5,
     })
-    gsap.from("h1", {
-      yPercent:50,
-      opacity:0,
-      duration:1,
-  } )
-    gsap.to(".main-right p, .main-right button ", {
-      y:0,
-      opacity:1,
-      duration:1,
-      stagger:0.05,
-  } )
+//     gsap.from("h1", {
+//       yPercent:50,
+//       opacity:0,
+//       duration:1,
+//   } )
+//     gsap.to(".main-right p, .main-right button ", {
+//       y:0,
+//       opacity:1,
+//       duration:1,
+//       stagger:0.05,
+//   } )
   })
-}, 1000);
+}, 100);
 
 
-
-
-
+// Swiper w/ Breakpoints
 
 // Swiper w/ Breakpoints
 const swiper = new Swiper('.swiper', {
@@ -87,59 +82,8 @@ const swiper = new Swiper('.swiper', {
 
     },    
   }
-})      
+})       
     
-
-    
-  
-
-
-
-
-
-  gsap.to(".growing-image-section .wrapper img", {
-    scrollTrigger: {
-      trigger: ".growing-image-section .wrapper img",
-      start: "top bottom", // when the top of the trigger hits the top of the viewport
-      scrub: 0.5,
-      end:"+=650px"
-  
-    },
-    borderRadius:"0px",
-    width:"100%",
-  
-  });
-
-
-
-
-
-
-
-
-
-// GSAP Media Queries
-
-
-
-
-
-// add a media query. When it matches, the associated function will run
-
-
-gsap.to(".growing-image-section .wrapper h3", {
-  scrollTrigger: {
-    trigger: ".growing-image-section",
-    start: "top center", // when the top of the trigger hits the top of the viewport
-    scrub: 0.2,
-    end:"+=800px"
-
-  },
-  y:0,
-  opacity:1,
-  // stagger:0.1,
-
-});
 
 
 // Pointer Events
@@ -148,7 +92,7 @@ gsap.to(".growing-image-section .wrapper h3", {
 gsap.to(".mySwiper", {
   scrollTrigger: {
     trigger: ".swiper-slide",
-    start: "top -12%", // when the top of the trigger hits the top of the viewport
+    start: "top 40%", // when the top of the trigger hits the top of the viewport
     scrub:0.1,
     markers:true,
   },
@@ -156,5 +100,3 @@ gsap.to(".mySwiper", {
   // stagger:0.1,
 
 });
-
-
