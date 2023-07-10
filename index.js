@@ -42,23 +42,17 @@ setTimeout(() => {
       opacity:0,
       duration:1.5,
       pointerEvents:"none",
-      ease: 
-  Power4.
-  easeInOut,
+      ease: "Power4.easeInOut",
     })
     gsap.to(".loader > svg", {
       scale:0,
       duration:1.5,
-      ease: 
-  Power4.
-  easeInOut,
+      ease: "Power4.easeInOut",
     })
     gsap.to("h1", {
       duration:1,
       clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
-      ease: 
-  Power1.
-  easeInOut,
+      ease: "Power4.easeInOut",
   } )
     gsap.to(".main-right p", {
       y:0,
@@ -67,12 +61,16 @@ setTimeout(() => {
       duration:1,
       stagger:0.05,
       clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
-      ease: 
-  Power4.
-  easeInOut,
+      ease: "Power4.easeInOut",
   } )
+  ScrollTrigger.refresh()
+
   })
 }, 1000);
+
+// Loader End
+
+// Two Column Right First Section Clip Path
 
 // Clip Path
 gsap.to(".two-column-right img", {
@@ -82,14 +80,13 @@ gsap.to(".two-column-right img", {
     end:"+=100",
     scrub:-0.5,
   },
-  ease: 
-  Power4.
-  easeIn,
+  ease: "Power4.easeInOut",
   clipPath:"polygon(100% 0, 0 0, 0 100%, 100% 100%)",
 });
 
 
 
+// Two Column Right First Section Clip Path EWnd
 
 
 
@@ -115,77 +112,57 @@ const swiper = new Swiper('.swiper', {
 
     },    
   }
-})      
+})   
+
+// Swiper Breakpoints End
     
 
-// Clip Path
+// Clip Path Swiper Slides
 gsap.to(".swiper-slide img", {
   scrollTrigger: {
     trigger: ".gallery-section",
     start: "top top", // when the top of the trigger hits the top of the viewport
-    end:"+=150",
+    end:"+=10",
     scrub:-0.5,
   },
-  ease: 
-Power4.
-easeIn,
+  ease: "Power4.easeInOut",
   clipPath:"polygon(100% 0, 0 0, 0 100%, 100% 100%)",
 });
 
-// Contact Section
-gsap.to(".contact-section", {
-  scrollTrigger: {
-    trigger: ".contact-section",
-    start: "top bottom", // when the top of the trigger hits the top of the viewport
-    end:"+=600",
-    scrub:0.2,
-  },
-  y:0,
-  opacity:1,
-  ease: 
-Power1.
-easeIn,
-});
+//Contact Section Media Queires
+
+mm.add("(max-width: 500px)", () => {
+  gsap.to(".contact-section .wrapper", {
+    scrollTrigger: {
+      trigger: ".contact-section .wrapper",
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end:"+=300",
+      scrub:0.2,
+    },
+    y:0,
+    opacity:1,
+    ease: "Power1.easeInOut",
+  });
+})
+mm.add("(min-width: 501px)", () => {
+  gsap.to(".contact-section .wrapper", {
+    scrollTrigger: {
+      trigger: ".contact-section .wrapper",
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end:"+=600",
+      scrub:0.2,
+    },
+    y:0,
+    opacity:1,
+    ease: "Power1.easeInOut",
+  });
+})
 
     
   
 
 
-
-
-
-  gsap.to(".growing-image-section .wrapper img", {
-    scrollTrigger: {
-      trigger: ".growing-image-section .wrapper img",
-      start: "top bottom", // when the top of the trigger hits the top of the viewport
-      scrub: 0.5,
-      end:"+=650px"
-  
-    },
-    borderRadius:"0px",
-    width:"100%",
-    ease: 
-Power4.
-easeInOut,
-  
-  });
-
-
-
-
-
-
-
-
-
-// GSAP Media Queries
-
-
-
-
-
-// add a media query. When it matches, the associated function will run
-
+// Growing Image 
 
 gsap.to(".growing-image-section .wrapper h3", {
   scrollTrigger: {
@@ -203,9 +180,23 @@ easeInOut,
   // stagger:0.1,
 
 });
+gsap.to(".growing-image-section .wrapper img", {
+  scrollTrigger: {
+    trigger: ".growing-image-section .wrapper img",
+    start: "top bottom", // when the top of the trigger hits the top of the viewport
+    scrub: 0.5,
+    end:"+=650px",
+    onLeave: () => ScrollTrigger.refresh()
+  },
+  borderRadius:"0px",
+  width:"100%",
+  ease: "Power4.easeInOut",
+})
+
+// Growing Image End
 
 
-
+// Pointer Events for Sliders
 
 mm.add("(min-width: 1024px)", () => {
   // Pointer Events
@@ -213,16 +204,25 @@ mm.add("(min-width: 1024px)", () => {
 
 gsap.to(".mySwiper", {
   scrollTrigger: {
-    trigger: ".swiper-slide",
-    start: "top -12%", // when the top of the trigger hits the top of the viewport
+    trigger: ".first-slide",
+    start: "top 20%", // when the top of the trigger hits the top of the viewport
     scrub:0.1,
+    toggleClass: {targets: ".mySwiper", className: "pointer"}
+  
   },
-  pointerEvents:"all",
-  // stagger:0.1,
-
+  
 });
   
 }) 
+// Pointer Events for Sliders End
+
+
+
+// window.addEventListener("resize", (e)  => [
+//   ScrollTrigger.refresh()
+// ])
+
+
 
 
 

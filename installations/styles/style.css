@@ -587,6 +587,7 @@ main .wrapper .main-right button {
   max-height: 1000px;
   color: white;
   border-radius: 2rem 2rem 0rem 0rem;
+  background-attachment: fixed;
 }
 .cta-section .wrapper {
   text-align: center;
@@ -594,6 +595,9 @@ main .wrapper .main-right button {
 .cta-section .wrapper button {
   background-color: #ffffff;
   color: #030303;
+  transform: translateY(4rem);
+  opacity: 0;
+  border: 2px solid #ffffff;
 }
 .cta-section .wrapper h2 {
   font-size: 40px;
@@ -602,6 +606,8 @@ main .wrapper .main-right button {
   margin: auto;
   -webkit-margin-after: 2rem;
           margin-block-end: 2rem;
+  transform: translateY(4rem);
+  opacity: 0;
 }
 
 footer .wrapper {

@@ -512,20 +512,6 @@ main .wrapper .main-right button {
   justify-content: space-between;
   width: 100%;
 }
-.gallery-section .wrapper .gallery-top .gallery-top-right {
-  position: relative !important;
-}
-.gallery-section .wrapper .gallery-top .gallery-top-right .circle {
-  aspect-ratio: 1;
-  background-color: #F5FBFF;
-  border-radius: 50%;
-  width: 32rem;
-  position: absolute;
-  inset: 0;
-  left: -30%;
-  top: -200%;
-  z-index: -1;
-}
 .gallery-section .wrapper .gallery-top h3 {
   max-width: 25ch;
 }
@@ -560,8 +546,7 @@ main .wrapper .main-right button {
   max-height: 850px;
   color: white;
   border-radius: 2rem 2rem 0rem 0rem;
-  transform: translateY(16rem);
-  opacity: 0;
+  background-attachment: fixed;
 }
 .contact-section .wrapper {
   display: flex;
@@ -569,6 +554,8 @@ main .wrapper .main-right button {
   align-items: center;
   justify-content: center;
   gap: 4rem;
+  transform: translateY(16rem);
+  opacity: 0;
 }
 .contact-section .wrapper .contact-titles {
   text-align: center;
@@ -754,6 +741,9 @@ body {
   .mySwiper {
     pointer-events: none;
   }
+  .mySwiper.pointer {
+    pointer-events: all;
+  }
 }
 .mySwiper .swiper-pagination {
   position: static;
@@ -761,7 +751,6 @@ body {
 .mySwiper .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;

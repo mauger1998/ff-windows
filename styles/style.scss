@@ -582,10 +582,7 @@ main {
             width:100%;
             align-self:center;
 
-            // img {
-            //     // border-radius:16rem;
-            //     // transform:translateX(8rem)
-            // }
+        
         }
 
         .gallery-top {
@@ -594,21 +591,7 @@ main {
             justify-content: space-between;
             width:100%;
 
-            .gallery-top-right {
-                position:relative !important;
-
-                .circle {
-                    aspect-ratio:1;
-                    background-color:$extra-light-blue;
-                    border-radius:50%;
-                    width:32rem;
-                    position:absolute;
-                    inset:0;
-                    left:-30%;
-                    top:-200%;
-                    z-index:-1;
-                }
-            }
+         
 
             h3 {
                 max-width:25ch;
@@ -653,6 +636,8 @@ main {
 
 
 
+
+
 .contact-section {
     background-image: linear-gradient(to top, #0303039d, #0303039d), url(../public/images/contact-background.png);
     background-size:cover;
@@ -660,8 +645,8 @@ main {
     max-height:850px;
     color:white;
     border-radius: 2rem 2rem 0rem 0rem;
-    transform:translateY(16rem);
-    opacity:0;
+    background-attachment: fixed;
+
 
     .wrapper {
         display:flex;
@@ -669,6 +654,8 @@ main {
         align-items: center;
         justify-content: center;
         gap:4rem;
+        transform:translateY(16rem);
+        opacity:0;
 
         .contact-titles {
             text-align:center;
@@ -900,6 +887,8 @@ footer {
 
 
 
+
+
  .mySwiper {
     width: 100%;
 
@@ -907,6 +896,9 @@ footer {
         & {
             pointer-events:none;
 
+        }
+        &.pointer {
+            pointer-events:all;
         }
     }
 
@@ -921,12 +913,12 @@ footer {
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap:1rem;
+
 
         
 
@@ -1030,3 +1022,5 @@ footer {
         }
     }
 }
+
+

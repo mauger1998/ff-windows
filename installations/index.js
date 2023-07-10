@@ -1,5 +1,7 @@
 // Register GSAP
 gsap.registerPlugin(ScrollTrigger);
+
+// Declare GSAP Media
 let mm = gsap.matchMedia();
 
 // Dropdown
@@ -35,7 +37,7 @@ const imgLoad = imagesLoaded(content)
 // Wait for images
 setTimeout(() => {
   const imgLoad = imagesLoaded(content)
-
+  //Loading Animations
   imgLoad.on("done", instance => {
     gsap.to(loader, {
       opacity:0,
@@ -119,9 +121,7 @@ gsap.to(".two-column-right img", {
     end:"+=100",
     scrub:-0.5,
   },
-  ease: 
-  Power4.
-  easeIn,
+  ease: "Power4.easeIn",
   clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
 });
 
@@ -146,3 +146,52 @@ mm.add("(min-width: 1024px)", () => {
   
 }) 
 
+
+// Background Fixed
+
+
+gsap.to(".cta-section h2, .cta-section button", {
+    scrollTrigger: {
+      trigger: ".cta-section h2",
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end:"+=500",
+      scrub:0.5,
+    },
+    y:0,
+    opacity:1,
+    ease: "Power1.easeInOut",
+    backgroundAttatchment:"fixed",
+    stagger:0.5,
+});
+
+
+
+
+  // $('button').tilt({
+  //   scale: 1.2,
+  //   perspective: 500
+  // })
+  
+  // $('button').tilt({
+  //     glare: true,
+  //     maxGlare: 0.5
+  // })
+
+
+let proxy = { skew: 0 },
+skewSetter = gsap.quickSetter(".big-grid-item", "skewY", "deg"), // fast
+clamp = gsap.utils.clamp(-10, 10); // don't let the skew go beyond 20 degrees. 
+
+ScrollTrigger.create({
+onUpdate: (self) => {
+  let skew = clamp(self.getVelocity() / - 600);
+  // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+  if (Math.abs(skew) > Math.abs(proxy.skew)) {
+    proxy.skew = skew;
+    gsap.to(proxy, {skew: 0, duration: 2, ease: "power3", stagger:0.5, overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+  }
+
+}
+});
+
+gsap.set(".big-grid-item", {transformOrigin: "right center", force3D: true});

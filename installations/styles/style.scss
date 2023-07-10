@@ -697,6 +697,9 @@ main {
     max-height:1000px;
     color:white;
     border-radius: 2rem 2rem 0rem 0rem;
+    background-attachment: fixed ;
+
+
 
 
     .wrapper {
@@ -705,6 +708,9 @@ main {
         button {
             background-color:$white;
             color:$black;
+            transform:translateY(4rem);
+            opacity:0;
+            border:2px solid $white;
         }
 
         h2 {
@@ -713,6 +719,8 @@ main {
             max-width:12ch;
             margin:auto;
             margin-block-end:2rem;
+            transform:translateY(4rem);
+            opacity:0;
          
         }
     }
@@ -857,3 +865,5 @@ footer {
  body {
     overflow-x:hidden !important;
  }
+
+
