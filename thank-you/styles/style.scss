@@ -315,6 +315,25 @@ main {
 
 // Main
 
+// Loader  
+
+.loader {
+    position:fixed;
+    background-color:white;
+    height:100vh;
+    z-index:10;
+
+    #loader {
+        width:200px;
+        #white-circle {
+            animation: spin 3000ms infinite ease-out;
+            transform-origin:center;
+        }
+    }
+
+    
+}
+
 main {
     .wrapper {
         display:flex;
