@@ -589,6 +589,11 @@ main .wrapper .main-right button {
   border-radius: 2rem 2rem 0rem 0rem;
   background-attachment: fixed;
 }
+@media (max-width: 500px) {
+  .cta-section {
+    background-attachment: scroll;
+  }
+}
 .cta-section .wrapper {
   text-align: center;
 }

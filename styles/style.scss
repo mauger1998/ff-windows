@@ -646,6 +646,9 @@ main {
     color:white;
     border-radius: 2rem 2rem 0rem 0rem;
     background-attachment: fixed;
+    @media (max-width:500px) {
+        background-attachment: scroll;
+    }
 
 
     .wrapper {

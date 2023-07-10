@@ -160,7 +160,7 @@ gsap.to(".cta-section h2, .cta-section button", {
     y:0,
     opacity:1,
     ease: "Power1.easeInOut",
-    backgroundAttatchment:"fixed",
+    // backgroundAttatchment:"fixed",
     stagger:0.5,
 });
 
