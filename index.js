@@ -58,11 +58,11 @@ setTimeout(() => {
       duration:1,
       clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
       ease: "Power4.easeInOut",
-      delay:0.5,
+      delay:0.2,
   } )
     gsap.to(".main-right p", {
       y:0,
-      delay:0.2,
+      delay:0.5,
       opacity:1,
       duration:1,
       stagger:0.05,
