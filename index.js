@@ -54,6 +54,12 @@ setTimeout(() => {
       clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
       ease: "Power4.easeInOut",
   } )
+    gsap.to(".main-left p.tagline", {
+      duration:1,
+      clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+      ease: "Power4.easeInOut",
+      delay:0.5,
+  } )
     gsap.to(".main-right p", {
       y:0,
       delay:0.2,
@@ -66,7 +72,7 @@ setTimeout(() => {
   ScrollTrigger.refresh()
 
   })
-}, 1000);
+}, 100);
 
 // Loader End
 

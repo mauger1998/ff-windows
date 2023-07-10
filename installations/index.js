@@ -150,7 +150,10 @@ mm.add("(min-width: 1024px)", () => {
 // Background Fixed
 
 
-gsap.to(".cta-section h2, .cta-section button", {
+
+
+mm.add("(min-width: 701px)", () => {
+  gsap.to(".cta-section h2, .cta-section button", {
     scrollTrigger: {
       trigger: ".cta-section h2",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
@@ -163,7 +166,25 @@ gsap.to(".cta-section h2, .cta-section button", {
     // backgroundAttatchment:"fixed",
     stagger:0.5,
 });
+  
+})
 
+mm.add("(max-width: 700px)", () => {
+  gsap.to(".cta-section h2, .cta-section button", {
+    scrollTrigger: {
+      trigger: ".cta-section h2",
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end:"+=200",
+      scrub:0.5,
+    },
+    y:0,
+    opacity:1,
+    ease: "Power1.easeInOut",
+    // backgroundAttatchment:"fixed",
+    stagger:0.2,
+});
+  
+})
 
 
 

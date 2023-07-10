@@ -155,7 +155,7 @@ p {
   right: 0;
   top: calc(100% + 0.5rem);
   padding: 1.5rem;
-  background-color: #262626;
+  background-color: #ffffff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -415,6 +415,9 @@ main .wrapper .main-right button {
   align-items: flex-start;
   gap: 1rem;
 }
+.all-services-gallery-section .wrapper .mySwiper .swiper-slide p {
+  text-align: left;
+}
 .all-services-gallery-section .wrapper .mySwiper .swiper-slide img {
   display: block;
   width: 100%;
@@ -426,6 +429,15 @@ main .wrapper .main-right button {
   transition: -webkit-clip-path 500ms ease-in-out;
   transition: clip-path 500ms ease-in-out;
   transition: clip-path 500ms ease-in-out, -webkit-clip-path 500ms ease-in-out;
+}
+@media (max-width: 600px) {
+  .all-services-gallery-section .wrapper .mySwiper .swiper-wrapper .swiper-slide h3 {
+    font-size: 14px !important;
+  }
+  .all-services-gallery-section .wrapper .mySwiper .swiper-wrapper .swiper-slide p {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+  }
 }
 
 .big-grid-section .wrapper {
@@ -457,7 +469,7 @@ main .wrapper .main-right button {
 }
 .big-grid-section .wrapper .big-grid .big-grid-item .big-grid-text-top p.tagline {
   font-size: 16px !important;
-  font-weight: 700;
+  font-weight: 500 !important;
 }
 .big-grid-section .wrapper .big-grid .big-grid-item .big-grid-text-top p:not(.tagline) {
   font-size: 14px !important;

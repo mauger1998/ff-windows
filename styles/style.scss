@@ -391,6 +391,13 @@ main {
             h1 {
                 max-width:16ch;
             }
+
+            p.tagline {
+                opacity:1;
+                font-size:24px !important;
+                letter-spacing:0.5rem;
+            }
+
         }
 
         .main-right {
@@ -493,6 +500,7 @@ main {
     
                     p.tagline {
                         margin-block-start:1rem;
+                        font-weight:500;
                     }
                 }
                 .two-column-left-bottom {
@@ -601,6 +609,11 @@ main {
                 max-width:32ch;
                 font-size:$tagline !important;
                 margin-block-start:2rem;
+
+                &.tagline {
+                    font-weight:500;
+
+                }
             }
         }
 
@@ -668,6 +681,7 @@ main {
 
                 .tagline {
                     text-align:center !important;
+                    font-weight:500 !important;
                 }
             }
         }
@@ -924,7 +938,15 @@ footer {
 
 
         
-
+        h3 {
+            font-size:20px !important;
+        }
+        @media(max-width:600px) {
+            h3 {
+                font-size:14px !important;
+            }
+        }
+        
 
 
 
