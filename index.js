@@ -217,9 +217,6 @@ gsap.to(".mySwiper", {
 
 
 
-// window.addEventListener("resize", (e)  => [
-//   ScrollTrigger.refresh()
-// ])
 
 
 
