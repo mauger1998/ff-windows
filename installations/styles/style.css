@@ -314,9 +314,10 @@ main {
   background-position: right;
 }
 main .wrapper {
-  padding: 24rem 4rem;
-  -webkit-padding-after: 2rem;
-          padding-block-end: 2rem;
+  -webkit-padding-before: 24rem 2rem;
+          padding-block-start: 24rem 2rem;
+  -webkit-padding-after: 4rem;
+          padding-block-end: 4rem;
   display: flex;
   align-items: flex-end;
   gap: 0rem;
