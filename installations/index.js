@@ -67,7 +67,7 @@ setTimeout(() => {
 //       stagger:0.05,
 //   } )
   })
-}, 1000);
+}, 500);
 
 
 // Swiper w/ Breakpoints

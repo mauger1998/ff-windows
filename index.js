@@ -72,7 +72,7 @@ setTimeout(() => {
   ScrollTrigger.refresh()
 
   })
-}, 1000);
+}, 500);
 
 // Loader End
 
