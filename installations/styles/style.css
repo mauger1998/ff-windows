@@ -345,6 +345,7 @@ main .wrapper .main-right button {
   main .wrapper {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-end;
     gap: 2rem;
   }
   main .wrapper .main-right {
