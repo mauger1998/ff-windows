@@ -740,4 +740,16 @@ footer .wrapper .footer-bottom p {
 html,
 body {
   overflow-x: hidden !important;
+}
+
+button {
+  cursor: pointer !important;
+}
+
+.island {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 12px;
+  gap: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

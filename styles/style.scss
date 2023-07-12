@@ -678,6 +678,14 @@ main {
 
         .contact-titles {
             text-align:center;
+
+            .links {
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                gap:1rem;
+                margin-block-start:1rem;
+            }
             h2 {
                 text-align:center !important;
                 margin-block-end:2rem;
@@ -777,6 +785,11 @@ footer {
             align-items: flex-end;
             justify-content: space-between;
             gap:4rem;
+            .address {
+                display:flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
             .footer-top-left {
                 display:grid;
@@ -836,6 +849,9 @@ footer {
             grid-row:2;
         }
         .column:nth-child(4) {
+            grid-row:2;
+        }
+        .column:nth-child(5) {
             grid-row:2;
         }
     }
@@ -1052,3 +1068,10 @@ footer {
 }
 
 
+.island {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size:12px;
+    gap:0.5rem;
+}
