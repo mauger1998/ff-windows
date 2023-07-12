@@ -320,6 +320,8 @@ main .wrapper {
   display: flex;
   align-items: flex-end;
   gap: 0rem;
+  height: 90svh;
+  max-height: 1000px;
 }
 main .wrapper .main-left {
   width: 80%;
@@ -603,7 +605,7 @@ main .wrapper .main-right button {
 }
 @media (max-width: 500px) {
   .cta-section {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
   }
 }
 .cta-section .wrapper {

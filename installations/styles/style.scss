@@ -377,6 +377,8 @@ main {
         display:flex;
         align-items: flex-end;
         gap:0rem;
+        height:90svh;
+        max-height:1000px;
 
         .main-left {
             width:80%;
@@ -722,7 +724,7 @@ main {
     background-attachment: fixed ;
 
     @media (max-width:500px) {
-        background-attachment: scroll;
+        background-attachment: scroll !important;
     }
 
 

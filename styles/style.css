@@ -559,7 +559,7 @@ main .wrapper .main-right button {
 }
 @media (max-width: 500px) {
   .contact-section {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
   }
 }
 .contact-section .wrapper {
