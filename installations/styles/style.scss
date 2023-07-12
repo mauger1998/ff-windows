@@ -725,7 +725,10 @@ main {
     background-attachment: fixed ;
 
     @media (max-width:500px) {
-        background-attachment: scroll !important;
+        & {
+            background-attachment: scroll !important;
+
+        }
     }
 
 
