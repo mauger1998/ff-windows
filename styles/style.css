@@ -552,7 +552,7 @@ main .wrapper .main-right button {
   background-image: linear-gradient(to top, rgba(3, 3, 3, 0.6156862745), rgba(3, 3, 3, 0.6156862745)), url(../public/images/contact-background.png);
   background-size: cover;
   min-height: 105lvh;
-  max-height: 850px;
+  max-height: 1000px;
   color: white;
   border-radius: 2rem 2rem 0rem 0rem;
   background-attachment: fixed;
