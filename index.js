@@ -19,7 +19,7 @@ document.addEventListener("click", (e) => {
 })
 // Loader
 // Select Content to be Loaded
-const content = document.querySelector("body")
+const content = document.querySelector("main")
 // Select Loader
 const loader = document.querySelector(".loader")
 
