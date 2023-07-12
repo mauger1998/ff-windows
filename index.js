@@ -1,9 +1,6 @@
 // Register GSAP
 gsap.registerPlugin(ScrollTrigger);
 let mm = gsap.matchMedia();
-
-
-
 // Dropdown
 document.addEventListener("click", (e) => {
   const isDropdownButton = e.target.matches("[data-dropdown-button]")
@@ -20,11 +17,7 @@ document.addEventListener("click", (e) => {
       dropdown.classList.remove("active")
   })
 })
-
-
-
 // Loader
-
 // Select Content to be Loaded
 const content = document.querySelector("body")
 // Select Loader
