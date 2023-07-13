@@ -28,7 +28,7 @@ const imgLoad = imagesLoaded(content)
 
 // Wait for images
 setTimeout(() => {
-  const imgLoad = imagesLoaded(content)
+  const imgLoad = imagesLoaded(content, { background: true })
 
   imgLoad.on("done", instance => {
     gsap.to(loader, {
