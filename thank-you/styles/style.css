@@ -297,6 +297,5 @@ main .wrapper h1 {
   text-align: center;
 }
 main .wrapper button {
-  -webkit-margin-before: 2em;
-          margin-block-start: 2em;
+  margin-block-start: 2em;
 }/*# sourceMappingURL=style.css.map */
