@@ -11,6 +11,11 @@
   overflow: hidden;
   padding-block-end: 0.5rem;
 }
+@media (max-width: 500px) {
+  .complaints-form-modal {
+    height: 85vh;
+  }
+}
 .complaints-form-modal .wrapper {
   height: 100%;
   overflow: hidden;
@@ -373,6 +378,14 @@ main .wrapper {
 }
 main .wrapper .main-left {
   width: 80%;
+}
+main .wrapper .main-left .tagline-wrapper img {
+  width: 115px;
+}
+@media (max-width: 500px) {
+  main .wrapper .main-left .tagline-wrapper img {
+    width: 75px;
+  }
 }
 main .wrapper .main-left h1 {
   max-width: 16ch;
