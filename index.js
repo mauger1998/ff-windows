@@ -91,8 +91,8 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 8,
     touchMove: true,
     freeMode: true,
-    mousewheel: true,
     createElements: true,
+    navigation: true,
 
     pagination: {
         el: '.swiper-pagination',

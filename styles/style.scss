@@ -60,7 +60,7 @@ main {
     .wrapper {
         width: 100%;
         max-width: 1440px;
-        padding: 8rem 4rem;
+        padding: 4rem 4rem;
     }
 }
 
@@ -558,12 +558,11 @@ main {
 // Gallery
 
 .gallery-section {
-    margin-bottom: 12rem;
     .wrapper {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 8rem;
+        gap: 4rem;
         overflow-x: hidden;
         padding-block: 6rem;
 
@@ -594,6 +593,10 @@ main {
                     font-weight: 500;
                 }
             }
+        }
+        a {
+            align-self: center;
+            margin-block-start: -2rem;
         }
     }
 
@@ -872,6 +875,8 @@ body {
 .mySwiper {
     width: 100%;
     // display: flex;
+    --swiper-navigation-color: white;
+    --swiper-navigation-size: 4rem;
 
     @media (min-width: 1024px) {
         & {
@@ -884,6 +889,7 @@ body {
 
     .swiper-pagination {
         position: static;
+        margin-block-start: 1rem;
     }
     .swiper-wrapper {
     }

@@ -95,7 +95,7 @@ header .wrapper,
 main .wrapper {
   width: 100%;
   max-width: 1440px;
-  padding: 8rem 4rem;
+  padding: 4rem 4rem;
 }
 
 button {
@@ -548,14 +548,11 @@ main .wrapper .main-right button {
   }
 }
 
-.gallery-section {
-  margin-bottom: 12rem;
-}
 .gallery-section .wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8rem;
+  gap: 4rem;
   overflow-x: hidden;
   padding-block: 6rem;
 }
@@ -582,6 +579,10 @@ main .wrapper .main-right button {
 }
 .gallery-section .wrapper .gallery-top p.tagline {
   font-weight: 500;
+}
+.gallery-section .wrapper a {
+  align-self: center;
+  margin-block-start: -2rem;
 }
 @media (max-width: 1024px) {
   .gallery-section .gallery-top {
@@ -819,6 +820,8 @@ body {
 
 .mySwiper {
   width: 100%;
+  --swiper-navigation-color: white;
+  --swiper-navigation-size: 4rem;
 }
 @media (min-width: 1024px) {
   .mySwiper {
@@ -830,6 +833,7 @@ body {
 }
 .mySwiper .swiper-pagination {
   position: static;
+  margin-block-start: 1rem;
 }
 .mySwiper .swiper-slide {
   text-align: center;
