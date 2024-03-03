@@ -346,8 +346,8 @@ header {
 // Main
 
 main {
-    background-image: linear-gradient(to top, #0303039d, #0303039d 120%),
-        url(../../public/images/installations-hero.png);
+    background-image: linear-gradient(to top, #0303037b, #0303037b 120%),
+        url('../../public/website/service-hero.webp');
     color: white;
     background-size: cover;
     background-position: right;
@@ -451,6 +451,7 @@ main {
         .swiper-pagination {
             position: static !important;
             margin-top: -4rem;
+            --swiper-pagination-color: black;
         }
 
         .mySwiper {
@@ -779,12 +780,14 @@ footer {
 
         .footer-bottom {
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: space-between;
             width: 100%;
             border-top: 0.5px solid black;
             padding-block-start: 4rem;
-
+            svg {
+                width: 150px;
+            }
             p {
                 font-size: $tagline !important;
             }

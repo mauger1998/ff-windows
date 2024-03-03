@@ -85,26 +85,32 @@ gsap.to('.two-column-right img', {
 // Two Column Right First Section Clip Path EWnd
 
 // Swiper w/ Breakpoints
-const swiper = new Swiper('.swiper', {
-    // Mobile First
-    slidesPerView: 2.4,
-    spaceBetween: 8,
-    touchMove: true,
-    freeMode: true,
-    createElements: true,
-    navigation: true,
+// Select all elements with the class .swiper and .swiper-two
+const swipers = document.querySelectorAll('.swiper')
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        // when window width is >= 800px
-        800: {
-            slidesPerView: 3.2,
-            spaceBetween: 16,
+// Initialize a Swiper instance for each of them
+swipers.forEach((swiperElement) => {
+    const swiper = new Swiper(swiperElement, {
+        // Mobile First
+        slidesPerView: 1.5,
+        spaceBetween: 8,
+        touchMove: true,
+        freeMode: true,
+        createElements: true,
+        navigation: true,
+
+        pagination: {
+            el: swiperElement.querySelector('.swiper-pagination'),
+            clickable: true,
         },
-    },
+        breakpoints: {
+            // when window width is >= 800px
+            800: {
+                slidesPerView: 3.2,
+                spaceBetween: 16,
+            },
+        },
+    })
 })
 
 // Swiper Breakpoints End
@@ -113,7 +119,7 @@ const swiper = new Swiper('.swiper', {
 gsap.to('.swiper-slide img', {
     scrollTrigger: {
         trigger: '.gallery-section',
-        start: 'top top', // when the top of the trigger hits the top of the viewport
+        start: 'top 30%', // when the top of the trigger hits the top of the viewport
         end: '+=10',
         scrub: -0.5,
     },
@@ -181,18 +187,6 @@ gsap.to('.growing-image-section .wrapper img', {
 
 // Pointer Events for Sliders
 
-mm.add('(min-width: 1024px)', () => {
-    // Pointer Events
-
-    gsap.to('.mySwiper', {
-        scrollTrigger: {
-            trigger: '.first-slide',
-            start: 'top 20%', // when the top of the trigger hits the top of the viewport
-            scrub: 0.1,
-            toggleClass: { targets: '.mySwiper', className: 'pointer' },
-        },
-    })
-})
 // Pointer Events for Sliders End
 
 // Modal

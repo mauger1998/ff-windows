@@ -360,7 +360,7 @@ header .header-wrapper .logo-container {
 }
 
 main {
-  background-image: linear-gradient(to top, rgba(3, 3, 3, 0.6156862745), rgba(3, 3, 3, 0.6156862745) 120%), url(../../public/images/installations-hero.png);
+  background-image: linear-gradient(to top, rgba(3, 3, 3, 0.4823529412), rgba(3, 3, 3, 0.4823529412) 120%), url("../../public/website/service-hero.webp");
   color: white;
   background-size: cover;
   background-position: right;
@@ -450,6 +450,7 @@ main .wrapper .main-right button {
 .all-services-gallery-section .wrapper .swiper-pagination {
   position: static !important;
   margin-top: -4rem;
+  --swiper-pagination-color: black;
 }
 .all-services-gallery-section .wrapper .mySwiper {
   --swiper-navigation-color: white;
@@ -724,11 +725,14 @@ footer .wrapper .footer-top .footer-top-right img {
 }
 footer .wrapper .footer-bottom {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   border-top: 0.5px solid black;
   padding-block-start: 4rem;
+}
+footer .wrapper .footer-bottom svg {
+  width: 150px;
 }
 footer .wrapper .footer-bottom p {
   font-size: 14px !important;

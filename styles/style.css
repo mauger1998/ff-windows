@@ -739,11 +739,14 @@ footer .wrapper .footer-top .footer-top-right img {
 }
 footer .wrapper .footer-bottom {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   border-top: 0.5px solid black;
   padding-block-start: 4rem;
+}
+footer .wrapper .footer-bottom svg {
+  width: 150px;
 }
 footer .wrapper .footer-bottom p {
   font-size: 14px !important;
@@ -818,24 +821,17 @@ body {
   overflow-x: hidden !important;
 }
 
-.mySwiper {
+.mySwiper:not(.all-services-gallery-section .mySwiper) {
   width: 100%;
   --swiper-navigation-color: white;
   --swiper-navigation-size: 4rem;
+  display: grid;
 }
-@media (min-width: 1024px) {
-  .mySwiper {
-    pointer-events: none;
-  }
-  .mySwiper.pointer {
-    pointer-events: all;
-  }
-}
-.mySwiper .swiper-pagination {
-  position: static;
+.mySwiper:not(.all-services-gallery-section .mySwiper) .swiper-pagination {
   margin-block-start: 1rem;
+  --swiper-pagination-color: white;
 }
-.mySwiper .swiper-slide {
+.mySwiper:not(.all-services-gallery-section .mySwiper) .swiper-slide {
   text-align: center;
   font-size: 18px;
   display: flex;
@@ -845,19 +841,18 @@ body {
   gap: 1rem;
   height: 100%;
 }
-.mySwiper .swiper-slide h3 {
+.mySwiper:not(.all-services-gallery-section .mySwiper) .swiper-slide h3 {
   font-size: 20px !important;
 }
 @media (max-width: 600px) {
-  .mySwiper .swiper-slide h3 {
+  .mySwiper:not(.all-services-gallery-section .mySwiper) .swiper-slide h3 {
     font-size: 14px !important;
   }
 }
-.mySwiper .swiper-slide img {
+.mySwiper:not(.all-services-gallery-section .mySwiper) .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: 9/16;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-clip-path: polygon(100% 100%, 0 100%, 0 100%, 100% 100%);
@@ -942,4 +937,62 @@ body {
   align-items: flex-start;
   font-size: 12px;
   gap: 0.5rem;
+}
+
+.all-services-gallery-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.all-services-gallery-section .wrapper h2 {
+  max-width: 10ch;
+}
+.all-services-gallery-section .wrapper .swiper-pagination {
+  --swiper-pagination-color: black;
+  --swiper-pagination-bottom: -0rem;
+  display: none;
+}
+.all-services-gallery-section .wrapper .mySwiper {
+  --swiper-navigation-color: white;
+  --swiper-navigation-size: 4rem;
+  width: 100%;
+}
+.all-services-gallery-section .wrapper .mySwiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  height: 100%;
+}
+.all-services-gallery-section .wrapper .mySwiper .swiper-slide p {
+  text-align: left;
+}
+.all-services-gallery-section .wrapper .mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  flex: 1;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: -webkit-clip-path 500ms ease-in-out;
+  transition: clip-path 500ms ease-in-out;
+  transition: clip-path 500ms ease-in-out, -webkit-clip-path 500ms ease-in-out;
+}
+.all-services-gallery-section .wrapper a {
+  margin-inline: auto;
+  margin-block-start: -2rem;
+}
+@media (max-width: 600px) {
+  .all-services-gallery-section .wrapper .mySwiper .swiper-wrapper .swiper-slide h3 {
+    font-size: 14px !important;
+  }
+  .all-services-gallery-section .wrapper .mySwiper .swiper-wrapper .swiper-slide p {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+  }
 }/*# sourceMappingURL=style.css.map */
